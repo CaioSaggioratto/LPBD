@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'foodttf';
+    src: url('fontes/Food\ Zone.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'flameregular';
+    src: url('fontes/FlameRegular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'flamesgordo';
+    src: url('fontes/FlameBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'flamesamassado';
+    src: url('fontes/FlameCondensed.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'foodotf';
+    src: url('fontes/Food\ Zone.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('fontes/Outfit-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    width: 100%;
+    height: 900vh;
+    margin: 0;
+    padding: 0;
+    background-color: #FBAA1B;
+    scroll-behavior: smooth;
+   
+}
+#principaldiv {
+    width: 100%;
+}
+#header {
+    background-color: #f6e4c8;
+    padding-left: 85px;
+    width: 95%;
+    
+}
+#loginModal{
+    float: right;
+    font-family: 'flamesgordo';
+    color:#D62300;
+    font-size: 25px;    
+}
+#openModalBtn{
+    float: right;
+    padding: 10px 60px 10px 10px;
+    font-family: 'flamesgordo';
+    color:#D62300;
+    font-size: 25px;
+    background-color: none;
+    width: 30px;
+    cursor: pointer;
+    
+}
+#txt_principal {
+    font-size: 90px;
+    font-family: 'flamesgordo';
+    color: #502314;
+    display: inline-block;
+    position: absolute;
+}
+#image {
+    height: 250px;
+    width: 250px;
+    display: inline-block;
+}
+nav.menu_lateral{
+    width: 80px;
+    height: 100%;
+    background-color: #D62300;
+    float: left;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #502314;
+    font-family: 'outfit';
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+nav.menu_lateral:hover{
+    width: 300px;
+/* nav.menu_lateral.expandir{
+    width: 300px; */
+
+}
+.btn_expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+.btn_expandir > i{
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+ul{
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+ul li.item_menu{
+    transition: .2s;
+}
+ul li.item_menu:hover{
+    background: #FBAA1B;
+
+}
+ul li.item_menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+ul li.item_menu a .txt_link{
+    margin-left: 40px;
+}
+ul li.item_menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+    
+}

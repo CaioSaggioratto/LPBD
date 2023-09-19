@@ -1,0 +1,47 @@
+.carrinho {
+    font-family: 'outfit';
+    padding: 20px 20px 20px 110px;
+    width: 1400px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);;
+}
+
+#titulocarrinho{
+    text-align: center;
+    width: 100%;
+    font-family: 'flameregular';
+    font-size: 48px;
+    padding-top: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.opcoes-entrega{
+    text-align: center;
+}

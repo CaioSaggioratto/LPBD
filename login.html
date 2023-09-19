@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='login.css'>
+    <title>Tela de Login</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('openModalBtn').addEventListener('click', function() {
+        document.getElementById('loginModal').style.display = 'block';
+    });
+
+    document.getElementById('closeModalBtn').addEventListener('click', function() {
+        document.getElementById('loginModal').style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === document.getElementById('loginModal')) {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+    });
+});
+</script>
+<body>
+    <button id="openModalBtn">Mostrar Login</button>
+
+    <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <div class="login-container">
+            <h2>Login</h2>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button id="button_entrar" type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
