@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lanchonete</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='slide.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='login.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='cardapio.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='carrinho.css'>
+    <script src='menu.js' defer></script>
+    <script src='slide.js' defer></script>    
+    <script src='slide.js' defer></script>    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('openModalBtn').addEventListener('click', function() {
+        document.getElementById('loginModal').style.display = 'block';
+    });
+
+    document.getElementById('closeModalBtn').addEventListener('click', function() {
+        document.getElementById('loginModal').style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === document.getElementById('loginModal')) {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+    });
+});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+    var radio = document.querySelector('.manual_btn')
+    var cont = 1
+
+    document.getElementById('radio1').checked = true
+
+    setInterval(() => {
+        proximaImg()
+    }, 5000)
+
+    function proximaImg(){
+        cont++
+
+        if(cont > 3){
+            cont = 1
+        }
+
+        document.getElementById('radio'= cont).checked = true
+    }
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    const radiosEntrega = document.querySelectorAll('input[name="entrega"]');
+    radiosEntrega.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.value === 'entrega') {
+                document.getElementById('infoEntrega').style.display = 'block';
+            } else {
+                document.getElementById('infoEntrega').style.display = 'none';
+            }
+        });
+    });
+});
+
+function removerProduto(btn) {
+    const row = btn.closest('tr');
+    row.parentNode.removeChild(row);
+}
+
+function finalizarCompra() {
+    alert("Compra finalizada!");
+}
+
+</script>
+
+<body>
+        <div id="header">
+            <div id="image"><img src="images/hamburguer.png" alt="hamburguer" width="100%" height="auto"></div>
+            <div id="txt_principal">Lanchonete<br>UNIP</div>
+            <div id="openModalBtn">Entrar</div>
+        
+            <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModalBtn" class="close">&times;</span>
+                <div class="login-container">
+                    <h2>Login</h2>
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Senha</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit">Entrar</button>
+                        <a href="cadastro.html"><button type="submit">Não possui conta? Cadastre-se</button></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        <section class="slider">
+            <div class="slider_content">
+
+                <input type="radio" name="btn_radio" id="radio1">
+                <input type="radio" name="btn_radio" id="radio2">
+                <input type="radio" name="btn_radio" id="radio3">
+
+                <div class="slide_box primeiro">
+                    <img class="img desktop" src="images/10853274-transformed.jpeg" alt="slide 1">
+                </div>
+                <div class="slide_box">
+                    <img class="img desktop" src="images/10925569-transformed.jpeg" alt="slide 1">
+                </div>
+                <div class="slide_box">
+                    <img class="img desktop" src="images/10105038-transformed.jpeg" alt="slide 1">
+                </div>
+                
+
+                <div class="nav_auto">
+                    <div class="auto_btn1"></div>
+                    <div class="auto_btn2"></div>
+                    <div class="auto_btn3"></div>
+                </div>
+
+                <div class="nav_manual">
+                    <label for="radio1" class="manual_btn"></label>
+                    <label for="radio2" class="manual_btn"></label>
+                    <label for="radio3" class="manual_btn"></label>
+                </div>
+
+            </div>
+        </section>
+        <nav class="menu_lateral">
+            <div class="btn_expandir">
+                <i class="bi bi-list" id="btn_exp"></i>
+            </div>
+            <ul>
+                <li class="item_menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-house-door"></i>
+                        </span>
+                        <span class="txt_link">Home</span>
+                    </a>
+                </li>
+                <li class="item_menu">
+                    <a href="#headercardapio">
+                        <span class="icon"><i class="bi bi-clipboard2"></i>
+                        </span>
+                        <span class="txt_link">Menu</span>
+                    </a>
+                </li>
+                <li class="item_menu">
+                    <a href="#titulocarrinho">
+                        <span class="icon"><i class="bi bi-cart"></i></span>
+                        <span class="txt_link">Carrinho</span>
+                    </a>
+                </li>
+                <li class="item_menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-person-circle"></i>
+                        </span>
+                        <span class="txt_link">Conta</span>
+                    </a>
+                </li>
+                <li class="item_menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-question-circle"></i>
+                        </span>
+                        <span class="txt_link">Sobre nós</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="headercardapio"><h3>Cardápio</h3></div>
+        <div class="cardapio">
+            <div class="item">
+                <img src="images/hamburguer1.jpg" alt="Imagem do prato">
+                <h3>UnipBurger</h3>
+                <p>Pão de brioche, 150g de carne bovina, Alface, Tomate, Queijo Mussarela e Molho especial.</p>
+                <span class="preco">R$ 18,90</span>
+            </div>
+            <div class="item">
+                <img src="images/hamburguer2.jpg" alt="Imagem do prato">
+                <h3>Burger Universitário</h3>
+                <p>Pão australiano, 150g de carne angus, Queijo cheddar envelhecido, Bacon crocante, Cebola caramelizada e Molho barbecue.</p>
+                <span class="preco">R$ 29,90</span>
+            </div>
+            <div class="item">
+                <img src="images/hamburguer3.jpg" alt="Imagem do prato">
+                <h3>Diploma Burger</h3>
+                <p>Pão de brioche, 150g de carne bovina, Alface, Picles, Tomate, Queijo cheddar, Cebola roxa e Molho especial.</p>
+                <span class="preco">R$ 18,90</span>
+            </div>
+            <div class="item">
+                <img src="images/hamburguer4.jpg" alt="Imagem do prato">
+                <h3>Burger Honoris Causa</h3>
+                <p>Pão Brioche, 150g de carne angus, molho barbecue especial feito na casa, bacon, Queijo Prato e cebola caramelizada.</p>
+                <span class="preco">R$ 22,90</span>
+            </div>
+            <div class="item">
+                <img src="images/hamburguer5.jpg" alt="Imagem do prato">
+                <h3>Burger Tradicional Gourmet</h3>
+                <p>Pão australiano, 150g de carne angus, Queijo gorgonzola, Cebola caramelizada e Alface americana.</p>
+                <span class="preco">R$ 23,90</span>
+            </div>
+            <div class="item">
+                <img src="images/hamburguer6.jpg" alt="Imagem do prato">
+                <h3>Classic UNIP Gourmet</h3>
+                <p>Pão brioche, 150g de carne bovina selecionada, Queijo cheddar, Alface, Tomate e Maionese artesanal.</p>
+                <span class="preco">R$ 22,90</span>
+            </div>
+            <div class="item">
+                <img src="images/hamburguer7.jpg" alt="Imagem do prato">
+                <h3>Burger Minimalista UNIP</h3>
+                <p>Pão brioche, 70g de carne bovina, queijo prato, alface, tomate.</p>
+                <span class="preco">R$ 24,50</span>
+            </div>
+            <div class="item">
+                <img src="images/hamburguer8.jpg" alt="Imagem do prato">
+                <h3>Pastel Burguer</h3>
+                <p>Pastel de presunto e queijo, Nachos, Molho chipotle, Queijo cheddar, 50g de carne bovina.</p>
+                <span class="preco">R$ 32,50</span>
+            </div>
+
+        </div>
+        <div id="titulocarrinho"><p>Seu Carrinho</p></div>
+        <div class="carrinho">
+            <table id="tabelaCarrinho">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Total</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Produto Exemplo</td>
+                        <td><input type="number" value="1" min="1"></td>
+                        <td>R$ 100,00</td>
+                        <td>R$ 100,00</td>
+                        <td><button onclick="removerProduto(this)">Remover</button></td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <div class="opcoes-entrega">
+                <h3>Opções de Entrega:</h3>
+                <label>
+                    <input type="radio" name="entrega" value="retirada" checked;> Retirada
+                </label>
+                <label>
+                    <input type="radio" name="entrega" value="entrega"> Entrega
+                </label>
+            </div>
+    
+            <div id="infoEntrega" style="display: none;">
+                <h3>Informações de Entrega</h3>
+                <label>Endereço:
+                    <input type="text" name="endereco">
+                </label>
+            </div>
+    
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    
+</body>
+
+
+
+
+
+
+    
+</html>
